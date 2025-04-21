@@ -1,0 +1,227 @@
+
+.featured-products-page {
+    display: flex;
+    flex-direction: column;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    margin: 0 auto;
+  
+    width: 100%;
+    background-color: black;
+    padding: 100px;
+  }
+  .product-card-page {
+    display: flex;
+      background: white;
+      padding: 15px;
+      text-align: center;
+      width: 900px;
+      height: 600px;
+      transition: transform 0.3s ease;
+    }
+  
+    .product-details-page {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: white;
+      /* justify-content: center; */
+      float: left;
+      width: 100%;
+      padding: 30px;
+    }
+  
+    .product-details-page  h3{
+      font-size: 4rem;
+      text-align: left;
+      line-height: 1em;
+      margin: 10px 0;
+      font-weight: bold;
+      font-family:'Playfair Display', serif;
+    }
+  
+    .product-details-page  h5{
+      font-size: 2rem;
+      text-align: left;
+      line-height: 1em;
+      margin: 10px 0;
+      font-weight:lighter;
+      font-family:'Space Grotesk', sans-serif;
+    }
+  
+    .product-details-page  .price{
+      font-size: 6rem;
+      text-align: left;
+      line-height: 1em;
+      margin: 10px 0;
+      font-weight:lighter;
+      font-family:'Space Grotesk', sans-serif;
+    }
+  
+  
+    .product-card-page img{
+      height: 100%;
+      object-fit: cover;
+      width: 350px;
+    
+    }
+    
+    .codepen-button {
+      display: block;
+      cursor: pointer;
+      color: white;
+      margin: 0 auto;
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+    
+      overflow: hidden;
+      padding: 3px;
+      isolation: isolate;
+    }
+    
+    .codepen-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 400%;
+      height: 100%;
+      background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+      background-size: 25% 100%;
+      animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+      animation-play-state: paused;
+      translate: -5% 0%;
+      transition: translate 0.25s ease-out;
+    }
+    
+    .codepen-button:hover::before {
+      animation-play-state: running;
+      transition-duration: 0.75s;
+      translate: 0% 0%;
+    }
+    
+    .admin-products-buttons button{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      padding: 2rem;
+      justify-content: space-between;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+      align-items: center;
+      background-color: black;
+      color: #00fff7 ;
+    }
+
+    @keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+      to {
+        transform: translateX(-25%);
+      }
+    }
+    
+    .codepen-button span {
+      position: relative;
+      display: block;
+      padding: 1.5rem 2rem;
+      font-size: 1.7rem;
+      background: #000;
+      border-radius: 3px;
+      height: 100%;
+    }
+  
+    .products-buttons{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    /* IDK BELOWO WOKKIN OR NOE */
+
+
+.addnewproduct{
+    position: fixed;
+    bottom: 50px;
+    width: 90%;
+    margin: 0px 100px;
+ 
+    background-color: black;
+    padding: 30px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 
+    0 0 10px #00fff7,
+    0 0 20px #00fff7,
+    0 0 40px #00fff7,
+    0 0 80px #00fff7;
+  transition: 0.3s ease;
+}
+
+.admin-product-form{
+    position: fixed;
+    bottom: 150px;
+    width: 90%;
+    margin: 0px 100px;
+    display: flex;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0);
+  
+    gap: 20px;
+    
+    font-family: "Space Grotesk", sans-serif;
+}
+.admin-product-form input, textarea{
+    margin: 10px;
+    padding: 20px;
+    
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.file-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+    background-color: white;
+}
+
+.file-details{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.file-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-buttons button{
+    background-color: #CFF800;
+    color: 
+    black;
+
+width: 50%;   
+ 
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 20px;
+}

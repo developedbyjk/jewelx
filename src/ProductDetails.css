@@ -1,0 +1,149 @@
+body{
+    /* background-color:black; */
+    /* color: white; */
+}
+
+.productdetailcontainer{
+  position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  margin: 0 auto;
+
+  width: 100%;
+  background-color: white;
+  justify-content: space-between;
+
+  
+}
+
+
+.product-details-page-payment {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    
+
+    
+    /* justify-content: center; */
+    float: left;
+    width: 90%;
+    padding: 30px;
+    margin: 10px;
+  }
+  .product-details-page{
+    color: black;
+  }
+
+  .product-details-page-payment  h3{
+    font-size: 4rem;
+    text-align: left;
+    line-height: 1em;
+    margin: 10px 0;
+    font-weight: bold;
+    font-family:'Playfair Display', serif;
+  }
+
+  .product-details-page-payment  h5{
+    font-size: 2rem;
+    text-align: left;
+    line-height: 1em;
+    margin: 10px 0;
+    font-weight:lighter;
+    font-family:'Space Grotesk', sans-serif;
+  }
+
+  .product-details-page-payment  .price{
+    font-size: 6rem;
+    text-align: left;
+    line-height: 1em;
+    margin: 10px 0;
+    font-weight:lighter;
+    font-family:'Space Grotesk', sans-serif;
+  }
+#codepen-button-buy{
+    width: 100%;
+}
+.product-card-page-img {
+
+
+    background-color: yellow;
+
+
+    border-radius: 8px;
+    margin: 10px;
+}
+
+
+
+.product-card-page-img {
+    width: auto;
+    height: 100vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.product-details-page-payment{
+    background-color: blanchedalmond;
+    /* background: rgba( 255, 255, 255, 0.1 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2.5px );
+-webkit-backdrop-filter: blur( 2.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+.productmoreinfo{
+    position: fixed;
+    top:0;
+    left: 50%;
+    transform: scale(0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+    background-color: wheat;
+    /* background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+.file-details input{
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    font-family: "Space Grotesk", sans-serif;
+    border: 3px solid black   
+}
+
+.tryvrbtn{
+    background-color: black;
+    width: 200px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+}
+.tryvrbtn a{
+    color: white;
+    text-decoration: none;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,187 @@
+
+.featured-products-page {
+  display: flex;
+  flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  margin: 0 auto;
+  position: relative;
+
+  width: 100%;
+  background-color: black;
+  padding: 100px;
+}
+
+#navbarp{
+  position: fixed;
+  top:0%;
+  right: 0%;
+}
+
+#productstitle{
+  position: fixed;
+  top: 50%;
+  left: -50px;
+  color: white;
+  transform: rotate(-90deg);
+  font-size: 6rem;
+  text-align: center;
+  line-height: 1em;
+  margin: 10px 0;
+  font-weight: bold;
+  font-family:'Playfair Display', serif;
+  font-style: italic;
+}
+.product-card-page {
+  display: flex;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    width: 900px;
+    height: 700px;
+    transition: transform 0.3s ease;
+  }
+
+  .product-details-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    /* justify-content: center; */
+    float: left;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .product-details-page  h3{
+    font-size: 4rem;
+    text-align: left;
+    line-height: 1em;
+    margin: 10px 0;
+    font-weight: bold;
+    font-family:'Playfair Display', serif;
+  }
+
+  .product-details-page  h5{
+    font-size: 2rem;
+    text-align: left;
+    line-height: 1em;
+    margin: 10px 0;
+    font-weight:lighter;
+    font-family:'Space Grotesk', sans-serif;
+  }
+
+  .product-details-page  .price{
+    font-size: 6rem;
+    text-align: left;
+    line-height: 1em;
+    margin: 10px 0;
+    font-weight:lighter;
+    font-family:'Space Grotesk', sans-serif;
+  }
+
+
+  .product-card-page img{
+    height: 100%;
+    object-fit: cover;
+  
+  }
+  
+  .codepen-button {
+    display: block;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+  
+    overflow: hidden;
+    padding: 3px;
+    isolation: isolate;
+  }
+  
+  .codepen-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+    background-size: 25% 100%;
+    animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+    animation-play-state: paused;
+    translate: -5% 0%;
+    transition: translate 0.25s ease-out;
+  }
+  
+  .codepen-button:hover::before {
+    animation-play-state: running;
+    transition-duration: 0.75s;
+    translate: 0% 0%;
+  }
+  
+  @keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+    to {
+      transform: translateX(-25%);
+    }
+  }
+  
+  .codepen-button span {
+    position: relative;
+    display: block;
+    padding: 1.5rem 2rem;
+    font-size: 1.7rem;
+    background: #000;
+    border-radius: 3px;
+    height: 100%;
+  }
+
+  .products-buttons{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* .product-card p {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  .product-card button{
+    background-color: #b68b40;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .product-card p {
+    font-size: 1rem;
+    color: #d4af37;
+    font-weight: bold;
+  }
+   */
+  
+  

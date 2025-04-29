@@ -16,7 +16,7 @@ export default function Admin() {
     React.useEffect(() => {
         onAuthStateChanged(auth, (user) => {
           console.log(user);
-          if (user && user.email === "designedbyjk@gmail.com") {
+          if (user && user.email === "designedbyjk@gmail.com" || user.email === "developedbyjk@gmail.com"  || user.email === "mvhora255@gmail.com"  || user.email === "lalazahiruddin@gmail.com") {
             Setuser(user);
             Navigate("/admin");
           } else {

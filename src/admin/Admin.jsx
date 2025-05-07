@@ -1,33 +1,45 @@
 import React, { useEffect, useState } from "react";
 import './Admin.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { auth, db } from "../firebase";
-import { signOut, onAuthStateChanged } from 'firebase/auth';
-import { addDoc, updateDoc, deleteDoc, doc, collection, onSnapshot, getDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from 'firebase/auth';
 
 export default function Admin() {
     const [orders, setOrders] = useState([]);
-    console.log(orders)
     const [orderDetails, setOrderDetails] = useState([]);
+    const [user, Setuser] = useState(null); // ✅ Added missing state
+    const [alluser, setAlluser] = useState([]);
     const Navigate = useNavigate();
 
-    React.useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-          console.log(user);
-          if (user && user.email === "designedbyjk@gmail.com" || user.email === "developedbyjk@gmail.com"  || user.email === "mvhora255@gmail.com"  || user.email === "lalazahiruddin@gmail.com") {
-            Setuser(user);
-            Navigate("/admin");
-          } else {
-            console.log("user not signed in or unauthorized");
-            Navigate("/admin/login");
-          }
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            console.log("Auth State Changed:", user);
+
+            if (
+                user &&
+                (
+                    user.email === "designedbyjk123@gmail.com" ||
+                    user.email === "developedbyjk@gmail.com" ||
+                    user.email === "mvhora255@gmail.com" ||
+                    user.email === "lalazahiruddin@gmail.com"
+                )
+            ) {
+                Setuser(user);
+            } else {
+                console.log("user not signed in or unauthorized");
+                Navigate("/admin/login");
+            }
         });
-      }, []); 
 
+        return () => unsubscribe(); // Cleanup subscription on unmount
+    }, [Navigate]);
 
-    const [alluser, setAlluser] = React.useState([]);
+    useEffect(() => {
+        if (user) {
+            Navigate("/admin");
+        }
+    }, [user, Navigate]);
 
     return (
         <div>
@@ -46,7 +58,7 @@ export default function Admin() {
                 <Link to="/admin/orders" className="adminbox">
                     <div>
                         <h1>🛍️</h1>
-                        <h3>Manage <br />Orders</h3>
+                        <h3>Manage <br />Bookings</h3>
                     </div>
                     <span className="material-symbols-outlined">
                         arrow_outward
@@ -66,8 +78,7 @@ export default function Admin() {
                 <Link to="/admin/vrs" className="adminbox">
                     <div>
                         <h1>👁️</h1>
-                        <h3>Manage <br />
-                            Vr’s</h3>
+                        <h3>Manage <br />Vr’s</h3>
                     </div>
                     <span className="material-symbols-outlined">
                         arrow_outward
@@ -77,15 +88,50 @@ export default function Admin() {
                 <Link to="/admin/feedback" className="adminbox">
                     <div>
                         <h1>💬</h1>
-                        <h3>View <br />
-                            Feedback</h3>
+                        <h3>View <br />Feedback</h3>
+                    </div>
+                    <span className="material-symbols-outlined">
+                        arrow_outward
+                    </span>
+                </Link>
+
+
+                
+                <Link to="/admin/storetime" className="adminbox">
+                    <div>
+                        <h1>📅</h1>
+                        <h3>Manage <br />Store Availability</h3>
+                    </div>
+                    <span className="material-symbols-outlined">
+                        arrow_outward
+                    </span>
+                </Link>
+
+
+               
+                <Link to="/admin/notifications" className="adminbox">
+                    <div>
+                        <h1> 📩</h1>
+                        <h3>Send <br />Notifications</h3>
+                    </div>
+                    <span className="material-symbols-outlined">
+                        arrow_outward
+                    </span>
+                </Link>
+
+
+                
+                <Link to="/admin/analytics" className="adminbox">
+                    <div>
+                        <h1> 📊</h1>
+                        <h3>Manage <br />Analytics </h3>
                     </div>
                     <span className="material-symbols-outlined">
                         arrow_outward
                     </span>
                 </Link>
             </div>
-
+{/* 
             <div className="adminpanel">
                 {orders.map((order) => (
                     <div key={order.id} className="order-item">
@@ -95,7 +141,7 @@ export default function Admin() {
                         <p>Details: {JSON.stringify(order)}</p>
                     </div>
                 ))}
-            </div>
+            </div> */}
         </div>
     );
 }

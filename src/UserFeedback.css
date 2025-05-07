@@ -1,13 +1,14 @@
 .feedback-form-container{
   display: block;
   margin: 0 auto;
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
     font-family: 'Space Grotesk', sans-serif;
     padding: 20px;
   }
   
   .feedback-form {
-    max-width: 90%;
+    /* max-width: 90%; */
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -101,7 +102,7 @@
   
   .feedback-container{
   gap: 100px;
-  width: 80%;
+  /* width: 80%; */
   }
   @media (max-width: 480px) {
     .feedback-form {

@@ -10,6 +10,8 @@ import Vrs from './admin/Vrs';
 import Feedback from './admin/Feedback';
 import LoginPage from './admin/LoginPage';
 import Orders from './admin/Orders';
+import Storetime from './admin/Storetime';
+import AdminNotifications from './admin/AdminNotifications';
 
 import UserProfile from './UserProfile';
 import ProductsPage from './ProductsPage';
@@ -18,16 +20,18 @@ import ProductsPage from './ProductsPage';
 import ProductDetails from './ProductDetails';
 import UserLoginPage from './UserLoginPage';
 
-import Checkout from './CheckoutPage';
+// import Checkout from './BookingPage';
 
 import Home from './Home';
-import CheckoutPage from './CheckoutPage';
+import BookingPage from './BookingPage';
 
-import PaymentProcessing from './PaymentProcessing';
+import BookingProcessing from './BookingProcessing';
 
 // import Feedback from './Feedback';
 
 import UserFeedback from './UserFeedback';
+import Contact from './Contact';
+import Analytics from './admin/Analytics';
 
 
 
@@ -47,6 +51,11 @@ function App() {
           <Route path="/admin/vrs" element={<Vrs/>} />
           <Route path="/admin/feedback" element={<Feedback />} />
           <Route path="/admin/orders" element={<Orders />} />
+          <Route path="/admin/storetime" element={<Storetime />} />
+          <Route path="/admin/notifications" element={<AdminNotifications />} />
+
+
+          <Route path="/admin/analytics" element={<Analytics />} />
 
 
           <Route path="/profile" element={<UserProfile />} />
@@ -60,13 +69,18 @@ function App() {
 
           <Route path="/products/:id" element={<ProductDetails />} />
 
-          <Route path="/payment" element={<PaymentProcessing />} />
+          <Route path="/payment" element={<BookingProcessing />} />
 
           <Route path="/feedback" element={<UserFeedback />} />
 
+
+          <Route path="/contact" element={<Contact />} />
+
           
 
-          <Route path="/products/checkout/:id" element={<CheckoutPage />} />
+          
+
+          <Route path="/products/checkout/:id" element={<BookingPage />} />
         </Routes>
      </BrowserRouter>
     

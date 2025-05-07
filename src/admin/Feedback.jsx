@@ -49,6 +49,7 @@ export default function AdminFeedback() {
   }
 
   const feedbackList = feedback.map((item) => (
+    <>
     <div className="feedback-box" key={item.id}>
       <p className="feedback-text">{item.feedback}</p>
       <div className="feedback-footer">
@@ -56,13 +57,15 @@ export default function AdminFeedback() {
         <button className="feedback-delete" onClick={() => DeleteWebsite(item)}>❌</button>
       </div>
     </div>
+    <br /><br />
+    </>
   ));
 
   return (
     <div className="admin-dashboard">
         <Navbar />
       <h2 className="feedback-heading">User Feedback</h2>
-      <div className="feedback-container">
+      <div className="admin-feedback-container">
         {feedbackList}
       </div>
     </div>

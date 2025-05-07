@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./PaymentProcessing.css"; // Importing the CSS file
+import "./BookingProcessing.css"; // Importing the CSS file
 
-const PaymentProcessing = () => {
+const BookingProcessing = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,10 +16,10 @@ const PaymentProcessing = () => {
   return (
     <div className="payment-container">
       <div className="spinner"></div>
-      <h2 className="payment-heading">Processing Your Payment...</h2>
-      <p className="payment-text">Please wait while we confirm your transaction.</p>
+      <h2 className="payment-heading">Processing Your Booking...</h2>
+      <p className="payment-text">Please wait while we confirm your Booking.</p>
     </div>
   );
 };
 
-export default PaymentProcessing;
+export default BookingProcessing;

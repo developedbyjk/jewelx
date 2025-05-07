@@ -27,7 +27,7 @@ export default function Orders() {
     React.useEffect(() => {
       const fetchProducts = async () => {
         try {
-          const productsRef = collection(db, "Orders");
+          const productsRef = collection(db, "Bookings");
           const querySnapshot = await getDocs(productsRef);
           const fetchedProducts = querySnapshot.docs.map(doc => ({
             id: doc.id,
@@ -45,7 +45,7 @@ export default function Orders() {
     async function cancelorder(id) {
         if (window.confirm("Are you sure you want to cancel this order?")) {
             try {
-                const orderRef = doc(db, "Orders", id);
+                const orderRef = doc(db, "Bookings", id);
                 await deleteDoc(orderRef);
                 console.log("Order cancelled successfully");
 
@@ -63,7 +63,7 @@ export default function Orders() {
         const product = products.find((p) => p.id === productId);
 
         try {
-            const orderRef = doc(db, "Orders", product.id);
+            const orderRef = doc(db, "Bookings", product.id);
             await updateDoc(orderRef, { status: newStatus });
             console.log("Status updated successfully");
 
@@ -112,7 +112,9 @@ export default function Orders() {
                                                     <p><strong>Name:</strong> {product.name}</p>
                                                     <p><strong>Phone:</strong> {product.phone}</p>
                                                     <p><strong>Zip:</strong> {product.zip}</p>
-                                                    <p><strong>Order Date:</strong> {new Date(product.createdAt).toLocaleString()}</p>
+                                                    <p><strong>Time:</strong> {product.preferredTime}</p>
+                                                    <p><strong>Date:</strong> {product.preferredDate}</p>
+                                                    {/* <p><strong>Order Date:</strong> {new Date(product.createdAt).toLocaleString()}</p> */}
 
                                                 </div>
                                             </div>
@@ -126,7 +128,7 @@ export default function Orders() {
                                                                   onChange={updatestatus}
                                                               >
                                                                   <option value="pending">Pending</option>
-                                                                  <option value="in delivery">In Delivery</option>
+                                                                  <option value="in delivery">Store Closed</option>
                                                                   <option value="cancelled">Cancelled</option>
                                                                   <option value="approved">Approved</option>
                                                               </select>

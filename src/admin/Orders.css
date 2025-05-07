@@ -90,6 +90,22 @@
   width: 100%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+.myprofilestatus select{
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  padding: 15px;
+  /* height: 100px; */
+  /* position: absolute;
+  bottom: 30px; */
+  position: relative;
+  /* border-radius: 90px; */
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+  bottom: -10px;
+  /* padding: 20px 40px; */
+  transition: background-color 0.3s ease;
+}
 
 .myprofilecancelorder{
   font-family: "Space Grotesk", sans-serif;

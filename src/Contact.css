@@ -1,0 +1,21 @@
+.contact{
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    flex-direction: ;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background-color: black;
+}
+
+
+.contact h3{
+    color: white;
+    font-size: 2.5rem;
+    font-style: italic;
+       /* text-align: center; */
+}
+
+.contact img{
+    height: 500px;
+}

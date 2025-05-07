@@ -192,10 +192,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li>Home</li>
-            <li>Shop</li>
+            <li>Product</li>
             <li>Contact</li>
-            <li>FAQs</li>
+         
           </ul>
         </div>
         <div className="footer-section">
@@ -204,7 +203,7 @@ const Footer = () => {
           <p>Phone: +1 234 567 890</p>
         </div>
       </div>
-      <p className="footer-bottom">&copy; 2025 RadEl Company. All rights reserved.</p>
+      <p className="footer-bottom">&copy; 2025 JewelX Company. All rights reserved.</p>
     </footer>
   );
 };

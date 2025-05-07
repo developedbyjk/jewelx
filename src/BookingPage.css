@@ -16,10 +16,70 @@ body {
     color: white;
   }
 
+  .booking-section{
+    flex: 1;
+    min-width: 320px;
+    width: 50%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .booking-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .booking-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .booking-section label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #ccc;
+  }
+
+  .booking-section input[type="email"],
+  .booking-section input[type="date"],
+  .booking-section input[type="text"],
+  .booking-section select {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .booking-section input[type="email"]:disabled {
+    background-color: #3a3a3a;
+    color: #888;
+  }
+
+  .booking-section button.book-button {
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .booking-section button.book-button:hover {
+    background-color: #45a049;
+  }
+
   .summary-section{
     flex: 1;
     min-width: 320px;
-    
+    width: 50%;
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 10px;

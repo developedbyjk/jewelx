@@ -107,11 +107,13 @@ const vrpoducts = products.map((product, index) => (
         <p className="price">{product.price}</p>
         <p>{product.vrlink}</p>
 
+        {/* <p>add feedback</p> */}
+
         <div className="products-buttons">
         <CircleBtn mylink={product.vrLink}/>
         {/* <a className="codepen-button"></a> */}
         <Link to={`/products/${product.id}`} className="codepen-button">
-        <span>Add to Cart</span>
+        <span>Book an Appointment </span>
         </Link>
         </div>
         {/* <Link to={`/product/${product.id}`}>View Details</Link> */}

@@ -18,7 +18,8 @@ const Navigate = useNavigate()
             .then((result) => {
                 
                 // Check if the user's email is 'developedbyjk@gmail.com'
-            if (result.user.email === 'developedbyjk@gmail.com' || result.user.email === 'designedbyjk123@gmail.com'|| result.user.email === 'webniversdigital@gmail.com') {
+            // if (result.user.email === 'developedbyjk@gmail.com' || result.user.email === 'designedbyjk123@gmail.com'|| result.user.email === 'webniversdigital@gmail.com') {
+                if (result.user.email) {
                 console.log("Signed in with Google");
                 Navigate("/admin");
             } else {

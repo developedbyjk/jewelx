@@ -3,6 +3,13 @@ body{
     /* color: white; */
 }
 
+.feedbackform{
+  position: fixed;
+  width: 300px;
+  bottom: 10%;
+  left: 10%;
+}
+
 .productdetailcontainer{
   position: relative;
     display: flex;

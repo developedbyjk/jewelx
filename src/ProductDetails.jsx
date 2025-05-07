@@ -4,6 +4,7 @@ import { auth, db } from './firebase';
 import { addDoc, collection, getDoc, doc } from "firebase/firestore";
 import './ProductDetails.css';
 import { Link } from "react-router-dom";
+import UserFeedback from "./UserFeedback";
 
 
 export default function ProductDetails() {
@@ -16,6 +17,7 @@ export default function ProductDetails() {
   // console.log("PRODUCT ID >> " , product.id)
   console.log("product info>>>" , product)
   const [loading, setLoading] = useState(true);
+  const [feedbackformopen, setfeedbackformopen] = useState(false);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -81,11 +83,24 @@ export default function ProductDetails() {
   if (!product) {
     return <h2>Product Not Found</h2>;
   }
+ function showfeedbackform() {
+    setfeedbackformopen(!feedbackformopen);
+  }
+ 
 
   return (
     <div className="productdetailcontainer">
 
-      <div className="tryvrbtn"><Link to={product.vrLink}>Try it Virtually</Link></div>
+      <div className="tryvrbtn" onClick={showfeedbackform}>Leave a Feedback</div>
+
+      {
+        feedbackformopen && (
+          <div className="feedbackform">
+            <UserFeedback/>
+          </div>
+        )
+      }
+   
 
         <div className="product-card-page-img">
            
@@ -110,9 +125,9 @@ export default function ProductDetails() {
               <input type="text" name="address" placeholder="Add Address" value={product.address || ''} onChange={handleChange} required />
               <input type="text" name="zip" placeholder="Add Zip Code" value={product.zip || ''} onChange={handleChange} required /> */}
               <div className="products-buttons">
-                <p>{product.id}</p>
+                {/* <p>{product.id}</p> */}
               <Link to={`/products/checkout/${id}`} className="codepen-button" id="codepen-button-buy" >
-                  <span>Order Now</span>
+                  <span>Book Now</span>
                 </Link>
                 {/* <a className="codepen-button" id="codepen-button-buy" onClick={() => addToDatabase(id)}>
                   <span>Order Now</span>

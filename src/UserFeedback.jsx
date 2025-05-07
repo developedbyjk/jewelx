@@ -72,10 +72,10 @@
                  <option value="more_than_3_months">More than 3 months</option>
               </select>
             </div>
-            <div className="feedback">
+            {/* <div className="feedback">
               <label htmlFor="comments">Additional Comments:</label>
               <textarea id="comments" name="comments" value={formData.comments} onChange={handleChange}></textarea>
-            </div>
+            </div> */}
             <button id="feedbak" type="submit">Submit</button>
          </form>
          </div>
